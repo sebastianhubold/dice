@@ -1,35 +1,37 @@
 //Hinzufügen von 'Eventlisteners' beim Seitenstart
 function init() {
-	document.getElementById('rollButton').addEventListener("touchstart", rollDice2);
-	document.getElementById('rollButton').addEventListener("click", rollDice2);
+	//wenn auf das DIV mit der ID 'rollButton' geklickt wird, soll die Funktion 'rollDice1' ausgeführt werden
+	/* ... hier kommt dein Code */
 }
 
 //Einfache Würfelfunktion
 function rollDice1() {
-	document.getElementById('dice').innerHTML = Math.ceil(Math.random()*6);
+	//In das DIV mit der ID 'dice' soll ein 'X' geschrieben werden
+	/* ... hier kommt dein Code */
 }
 
 //Mit Hilfe von 'setInterval' soll die Funktion 'animDice' mehrmals hintereinander (mit einer kurzen Pause) ausgeführt werden.
-function rollDice2() {	
-
+function rollDice2() {
+	//damit während der "Animation" keine klicks die Funktion stören, wird der Eventlistener anfangs entfernt und zum Schluss wieder hinzugefügt.
 	document.getElementById('rollButton').removeEventListener('click', rollDice2);
-	document.getElementById('rollButton').removeEventListener('touchstart', rollDice2);
 
-	var x = 0;
-	var repeatedFunction = function() {
-		x++;
-		document.getElementById('dice').innerHTML= Math.ceil(Math.random()*6);
-		if (x == 10) {
+	var x=0;
+
+	var animDice = function(){
+		// bei jedem Ausführen soll die Variable x um 1 erhöht werden.
+		/* ... hier kommt dein Code */
+
+		// bei jedem Ausführen soll eine Zufallszahl in das DIV mit der ID 'dice' geschrieben werden.
+		/* ... hier kommt dein Code */
+
+		if(x==10){
 			clearInterval(timer);
-			document.getElementById('dice').innerHTML = Math.ceil(Math.random()*6);
-			document.getElementById('rollButton').addEventListener("touchstart", rollDice2);
-			document.getElementById('rollButton').addEventListener("click", rollDice2);
+			document.getElementById('rollButton').addEventListener('click', rollDice2);
 		}
 	}
-	timer = setInterval(repeatedFunction, 100);
-	
-	
+	timer = 0; /* ... den Wert der Variablen 'timer' musst du noch anpassen */
 }
+
 
 //(optional) Würfel SVG-Grafiken
 /*
