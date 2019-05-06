@@ -86,3 +86,40 @@ a {
   font-size:9vw;
   line-height: 9vw;
 }
+/*----------------------*/
+
+#Startseite{
+  position: relative;
+  float: left;
+  clear: left;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.box1{
+  display:inline-block;
+  width: 80vw;
+  height: 15vw;
+  margin: 10vw;
+  box-sizing: border-box;
+  border:0;
+  border-radius: 1vw;
+  background: #aca5a5;
+  color:#ffffff;
+  font-size: 10vw;
+}
+
+.box2{
+  display:inline-block;
+  width: 80vw;
+  height: 15vw;
+  margin: 5vw;
+  box-sizing: border-box;
+  border:0;
+  border-radius: 1vw;
+  background: #aca5a5;
+  color:#000000;
+  font-size: 10vw;
+  margin-top: 0px;
+}
